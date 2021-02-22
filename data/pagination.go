@@ -3,11 +3,11 @@ package data
 import "math"
 
 type Paging struct {
-	CurrentPage int // 当前页码
-	PageSize    int // 每页显示多少条
-	TotalCount  int // 总条数
-	PageCount   int // 总共多少页
-	Offset      int `json:"-"` // 起始页
+	CurrentPage int `json:"currentPage"` // 当前页码
+	PageSize    int `json:"pageSize"`    // 每页显示多少条
+	TotalCount  int `json:"totalCount"`  // 总条数
+	PageCount   int `json:"pageCount"`   // 总共多少页
+	Offset      int `json:"-"`           // 起始页
 }
 
 func NewPagination(page, pageSize, total int) *Paging {
